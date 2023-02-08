@@ -1,0 +1,23 @@
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata:
+  creationTimestamp: null
+  labels:
+    app.kubernetes.io/created-by: application-service
+    app.kubernetes.io/instance: node-hello-world-es5g
+    app.kubernetes.io/managed-by: kustomize
+    app.kubernetes.io/name: node-hello-world-es5g
+    app.kubernetes.io/part-of: my-app
+  name: node-hello-world-es5g
+  namespace: sde-rcook-tenant
+spec:
+  port:
+    targetPort: 8080
+  tls:
+    insecureEdgeTerminationPolicy: Redirect
+    termination: edge
+  to:
+    kind: Service
+    name: node-hello-world-es5g
+    weight: 100
+status: {}
