@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  name: node-hello-world-es5g
+  namespace: sde-rcook-tenant
+spec:
+  replicas: 1
+  selector: {}
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+    spec:
+      containers:
+      - image: quay.io/redhat-appstudio/user-workload@sha256:acdd5b685dca8a1277eb25316b18c0ab74c541fa2df77438b5c30f3cf3fda506
+        name: container-image
+        resources: {}
+status: {}
