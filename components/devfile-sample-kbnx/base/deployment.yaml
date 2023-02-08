@@ -23,7 +23,7 @@ spec:
         app.kubernetes.io/instance: devfile-sample-kbnx
     spec:
       containers:
-      - image: quay.io/redhat-appstudio/user-workload:sde-rcook-tenant-devfile-sample-kbnx
+      - image: quay.io/redhat-appstudio/user-workload@sha256:60d27e276d380dfff300e7de38c728c02d4c4886586348b7b5942b86ce0e5d7c
         imagePullPolicy: Always
         livenessProbe:
           httpGet:
