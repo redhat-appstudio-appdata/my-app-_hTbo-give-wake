@@ -23,7 +23,7 @@ spec:
         app.kubernetes.io/instance: node-hello-world-es5g
     spec:
       containers:
-      - image: quay.io/redhat-appstudio/user-workload:sde-rcook-tenant-node-hello-world-es5g
+      - image: quay.io/redhat-appstudio/user-workload@sha256:acdd5b685dca8a1277eb25316b18c0ab74c541fa2df77438b5c30f3cf3fda506
         imagePullPolicy: Always
         livenessProbe:
           httpGet:
