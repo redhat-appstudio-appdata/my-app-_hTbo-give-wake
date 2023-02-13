@@ -23,7 +23,7 @@ spec:
         app.kubernetes.io/instance: node-hello-world-es5g
     spec:
       containers:
-      - image: quay.io/redhat-appstudio/user-workload@sha256:d215cf885eb662e03c686e3eaa13e643062a90e6cb43a78d394cd7706fe1b5d2
+      - image: quay.io/redhat-appstudio/user-workload@sha256:acdd5b685dca8a1277eb25316b18c0ab74c541fa2df77438b5c30f3cf3fda506
         imagePullPolicy: Always
         livenessProbe:
           httpGet:
@@ -40,6 +40,9 @@ spec:
           tcpSocket:
             port: 8080
         resources:
+          limits:
+            cpu: "1"
+            memory: 512Mi
           requests:
             cpu: 10m
             memory: 50Mi
